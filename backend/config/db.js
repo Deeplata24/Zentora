@@ -1,10 +1,16 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const dbconnect = async () => {
-    const con = await mongoose.connect('mongodb://localhost:27017/project-zentora');
-    if (con) {
-        console.log('database connected successfully');
+    try {
+        const con = await mongoose.connect(process.env.MONGO_URI);
 
+        if (con) {
+            console.log("Database connected successfully");
+        }
+    } catch (error) {
+        console.error("Database connection failed:", error.message);
+        process.exit(1);
     }
-}
-export default dbconnect
+};
+
+export default dbconnect;

@@ -8,7 +8,7 @@ const UserPlans = () => {
     fetchData()
   }, [])
   const fetchData = async () => {
-    const res = await axios.get('http://localhost:9000/admin-get-plans')
+    const res = await axios.get('https://zentora-0iy2.onrender.com/admin-get-plans')
     setData(res?.data?.result)
   }
   const handlePurchasePlan = (item) => {
@@ -26,7 +26,7 @@ const UserPlans = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const data = { planId, userId };
-        const res = await axios.post('http://localhost:9000/user-purchase-plan', data)
+        const res = await axios.post('https://zentora-0iy2.onrender.com/user-purchase-plan', data)
         if (res?.data?.success == true) {
           Swal.fire({
             title: "PurchasePlan",

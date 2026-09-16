@@ -32,7 +32,7 @@ const ClientPostProject = () => {
     const finalData = { ...data, clientId };
 
     const res = await axios.post(
-      "http://localhost:9000/client-post-project",
+      "https://zentora-0iy2.onrender.com/client-post-project",
       finalData
     );
 

@@ -18,7 +18,7 @@ const ContactUs = () => {
             </div>
             <div className='col-5 text-light'>
                <h5>Call us via :</h5>
-              <span className='h3'>+91-1234567890</span>
+              <span className='h3'>+91-9366328459</span>
             </div>
           </div>
         </div>

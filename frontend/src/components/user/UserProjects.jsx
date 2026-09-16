@@ -12,7 +12,7 @@ const UserProjects = () => {
   }, []);
 
   const fetchData = async () => {
-    const res = await axios.get("http://localhost:9000/user-project-list");
+    const res = await axios.get("https://zentora-0iy2.onrender.com/user-project-list");
     setData(res?.data?.result);
   };
   const handlePostBid = async () => {
@@ -27,7 +27,7 @@ const UserProjects = () => {
       return 0
     }
     const data = { userId, projectId, amount }
-    const res = await axios.post('http://localhost:9000/user-create-bids', data);
+    const res = await axios.post('https://zentora-0iy2.onrender.com/user-create-bids', data);
     if (res?.data?.success == true) {
       Swal.fire({
         title: "Biding",

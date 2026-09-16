@@ -10,7 +10,7 @@ const AdminProjects = () => {
   }, []);
 
   const fetchData = async () => {
-      const res = await axios.get("http://localhost:9000/admin-project-list");
+      const res = await axios.get("https://zentora-0iy2.onrender.com/admin-project-list");
       setData(res?.data?.result);
   };
 

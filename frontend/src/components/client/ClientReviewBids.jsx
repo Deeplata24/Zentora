@@ -12,14 +12,14 @@ const ClientReviewBids = () => {
 
   const fetchData = async () => {
     const projectId = location?.state?._id
-    const res = await axios.get(`http://localhost:9000/client-biding-list?projectId=${projectId}`)
+    const res = await axios.get(`https://zentora-0iy2.onrender.com/client-biding-list?projectId=${projectId}`)
     setData(res?.data?.result)
   }
 
   const handleStatus = async (status) => {
     const projectId = location?.state?._id;
     const data = { projectId, status }
-    const res = await axios.put('http://localhost:9000/client-biding-action', data);
+    const res = await axios.put('https://zentora-0iy2.onrender.com/client-biding-action', data);
     if (res?.data?.success == true) {
       Swal.fire({
         title: "Actions",

@@ -10,7 +10,7 @@ const UserBids = () => {
   const fetchData = async () => {
     const info = JSON.parse(localStorage.getItem('info'));
     const userId = info?._id;
-    const res = await axios.get(`http://localhost:9000/user-get-bids?userId=${userId}`);
+    const res = await axios.get(`https://zentora-0iy2.onrender.com/user-get-bids?userId=${userId}`);
     setData(res?.data?.result)
   }
 

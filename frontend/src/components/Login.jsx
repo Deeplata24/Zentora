@@ -23,7 +23,7 @@ const Login = () => {
   });
 
   const handleLogin = async (data) => {
-    const res = await axios.post('http://localhost:9000/login', data);
+    const res = await axios.post('https://zentora-0iy2.onrender.com/login', data);
     if (res?.data?.success == true) { 
       localStorage.setItem("info", JSON.stringify(res?.data?.result))
       if (res?.data?.result?.type == 'admin') {

@@ -18,7 +18,7 @@ const Register = () => {
     resolver: yupResolver(schema),
   });
   const handleRegister = async (data) => {
-    const res = await axios.post('http://localhost:9000/register', data)
+    const res = await axios.post('https://zentora-0iy2.onrender.com/register', data)
     if (res?.data?.success == true) {
       Swal.fire({
         title: "Register",
